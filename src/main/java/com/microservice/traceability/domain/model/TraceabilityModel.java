@@ -13,8 +13,9 @@ public class TraceabilityModel {
     private String newStatus;
     private Long employeeId;
     private String employeeEmail;
+    private Long restaurantId;
 
-    public TraceabilityModel(String id, Long orderId, Long customerId, String emailCustomer, LocalDateTime date, String previousStatus, String newStatus, Long employeeId, String employeeEmail) {
+    public TraceabilityModel(String id, Long orderId, Long customerId, String emailCustomer, LocalDateTime date, String previousStatus, String newStatus, Long employeeId, String employeeEmail, Long restaurantId) {
         this.id = id;
         this.orderId = orderId;
         this.customerId = customerId;
@@ -24,8 +25,12 @@ public class TraceabilityModel {
         this.newStatus = newStatus;
         this.employeeId = employeeId;
         this.employeeEmail = employeeEmail;
+        this.restaurantId = restaurantId;
     }
 
+    public TraceabilityModel() {
+
+    }
 
     public String getId() {
         return id;
@@ -97,5 +102,13 @@ public class TraceabilityModel {
 
     public void setEmployeeEmail(String employeeEmail) {
         this.employeeEmail = employeeEmail;
+    }
+
+    public Long getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(Long restaurantId) {
+        this.restaurantId = restaurantId;
     }
 }

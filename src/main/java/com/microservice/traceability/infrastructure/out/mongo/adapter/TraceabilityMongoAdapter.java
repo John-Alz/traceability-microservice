@@ -61,5 +61,10 @@ public class TraceabilityMongoAdapter implements ITraceabilityPersistencePort {
         }
     }
 
+    @Override
+    public List<TraceabilityModel> getAllOrdersLogs() {
+        return traceabilityEntityMapper.entityListToModelList(traceabilityRepository.findAll());
+    }
+
 
 }

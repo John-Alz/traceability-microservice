@@ -8,6 +8,7 @@ public record TraceabilityRequestDto(
          String previousStatus,
          String newStatus,
          Long employeeId,
-         String employeeEmail
+         String employeeEmail,
+         Long restaurantId
 ) {
 }
